@@ -4,12 +4,13 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-app.use('/backend/search/products', createProxyMiddleware({ target: 'https://www.blibli.com' }));
+app.use('/backend', createProxyMiddleware({ target: 'https://www.blibli.com', changeOrigin: true }));
 
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send('Hello World!')
+    //   response.send('Hello World!')
+    response.sendFile(path.join(__dirname + '/public/login.html'));
 })
 
 app.get('/search', async (req, res) => {
