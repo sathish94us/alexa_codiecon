@@ -19,9 +19,9 @@ app.get('/backend', async (req, res) => {
         console.log('success: ', data.data.data)
         res.json(data.data.data)
     }
-    catch {
+    catch(err) {
         console.log('failed')
-        res.send('failed')
+        res.send(err)
     }
 })
 
