@@ -1,9 +1,12 @@
 const express = require('express');
+var cors = require('cors')
 const axios = require('axios');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 // var proxy = require('express-http-proxy');
 
 const app = express();
+
+app.use(cors())
 
 // app.use('/backend', proxy('https://www.blibli.com'));
 app.use('/backend', createProxyMiddleware({ target: 'https://wwwuata.gdn-app.com/', changeOrigin: true }));
