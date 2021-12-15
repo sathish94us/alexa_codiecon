@@ -1,0 +1,26 @@
+{
+    "name": "codiecon_alexa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+    },
+    "dependencies": {
+        "axios": "^0.24.0",
+        "express": "^4.17.1",
+        "http-proxy-middleware": "^2.0.1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/sathish94us/alexa-codiecon.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/sathish94us/alexa-codiecon/issues"
+    },
+    "homepage": "https://github.com/sathish94us/alexa-codiecon#readme"
+  }
+  
