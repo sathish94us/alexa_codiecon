@@ -21,7 +21,7 @@ app.get('/backend', async (req, res) => {
     }
     catch(err) {
         console.log('failed')
-        res.send(`${err}`)
+        res.send(`${err.message}`)
     }
 })
 
