@@ -6,7 +6,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 // app.use('/backend', proxy('https://www.blibli.com'));
-app.use('/backend', createProxyMiddleware({ target: 'https://www.blibli.com', changeOrigin: true }));
+app.use('/backend', createProxyMiddleware({ target: 'https://wwwuata.gdn-app.com/', changeOrigin: true }));
 // createProxyMiddleware({ target: 'https://www.blibli.com/backend', changeOrigin: true })
 
 app.use(express.static(__dirname + '/public'))
