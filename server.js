@@ -1,12 +1,13 @@
 const express = require('express');
 const axios = require('axios');
 const { createProxyMiddleware } = require('http-proxy-middleware');
-var proxy = require('express-http-proxy');
+// var proxy = require('express-http-proxy');
 
 const app = express();
 
-app.use('/backend', proxy('https://www.blibli.com'));
-// app.use('/backend', createProxyMiddleware({ target: 'https://www.blibli.com', changeOrigin: true }));
+// app.use('/backend', proxy('https://www.blibli.com'));
+app.use('/backend', createProxyMiddleware({ target: 'https://www.blibli.com', changeOrigin: true }));
+// createProxyMiddleware({ target: 'https://www.blibli.com/backend', changeOrigin: true })
 
 app.use(express.static(__dirname + '/public'))
 
