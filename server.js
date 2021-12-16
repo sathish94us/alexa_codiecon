@@ -9,7 +9,13 @@ const app = express();
 app.use(cors())
 
 // app.use('/backend', proxy('https://www.blibli.com'));
-app.use('/backend', createProxyMiddleware({ target: 'https://wwwuata.gdn-app.com/', changeOrigin: true }));
+app.use('/json_placeholder', createProxyMiddleware({ 
+    target: 'https://www.blibli.com',
+    changeOrigin: true,
+    pathRewrite: {
+        [`^/json_placeholder`]: '',
+    }
+}));
 // createProxyMiddleware({ target: 'https://www.blibli.com/backend', changeOrigin: true })
 
 app.use(express.static(__dirname + '/public'))
@@ -21,8 +27,11 @@ app.get('/', function(request, response) {
 
 app.get('/search', async (req, res) => {
     try {
-        const data = await axios.get('/backend/search/products?sort=&page=1&start=0&searchTerm=iphone&intent=true&merchantSearch=true&multiCategory=true&customUrl=&&channelId=mobile-web&showFacet=false&userIdentifier=536652622&isMobileBCA=false&userLatLong=-6.197754600000001%2C106.8242036&userLocationCity=Kota%20Jakarta%20Pusat%27');
-        // const name = data.data.data.products[2].name   
+        // const data = await axios.get('/backend/search/products?sort=&page=1&start=0&searchTerm=iphone&intent=true&merchantSearch=true&multiCategory=true&customUrl=&&channelId=mobile-web&showFacet=false&userIdentifier=536652622&isMobileBCA=false&userLatLong=-6.197754600000001%2C106.8242036&userLocationCity=Kota%20Jakarta%20Pusat%27');
+        const data = await axios.get('/json_placeholder');
+        // const name = data.data.data.products[2].name  
+        console.log('success: ', data) 
+        console.log('success: ', data.data)
         console.log('success: ', data.data.data)
         res.json(data.data.data)
     }
