@@ -1,7 +1,0 @@
-{
-    "name": "Alexa codiecon",
-    "description": "Alexa codiecon",
-    "repository": "https://github.com/sathish94us/alexa_codiecon",
-    "logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg",
-    "keywords": ["node", "express", "static"]
-  }

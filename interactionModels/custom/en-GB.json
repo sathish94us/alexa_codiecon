@@ -1,0 +1,165 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "the blibli",
+      "intents": [
+        {
+          "name": "searchTerm",
+          "slots": [
+            {
+              "name": "search",
+              "type": "searchKey"
+            }
+          ],
+          "samples": [
+            "get {search}",
+            "find {search}",
+            "show {search}",
+            "search {search}",
+            "list {search}"
+          ]
+        },
+        {
+          "name": "hotelSearch",
+          "slots": [
+            {
+              "name": "province",
+              "type": "provinceKey"
+            }
+          ],
+          "samples": [
+            "find hotels in {province}",
+            "get hotels in {province}",
+            "show hotels in {province}",
+            "search hotels in {province}",
+            "list hotels in {province}",
+            "find hotel in {province}",
+            "get hotel in {province}",
+            "show hotel in {province}",
+            "search hotel in {province}",
+            "list hotel in {province}",
+            "hotel available in {province}",
+            "hotels available in {province}",
+            "available hotel in {province}",
+            "available hotels in {province}"
+          ]
+        },
+        {
+          "name": "eventsIntent",
+          "slots": [],
+          "samples": [
+            "events near me",
+            "events",
+            "top events",
+            "popular events",
+            "search events",
+            "find events",
+            "available events",
+            "search events near me",
+            "top events for me",
+            "popular events for me",
+            "search events for me",
+            "find events for me",
+            "available events for me"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "apple"
+              }
+            },
+            {
+              "name": {
+                "value": "samsung"
+              }
+            },
+            {
+              "name": {
+                "value": "iphone"
+              }
+            },
+            {
+              "name": {
+                "value": "nokia"
+              }
+            },
+            {
+              "name": {
+                "value": "iphone13"
+              }
+            },
+            {
+              "name": {
+                "value": "iphone 13"
+              }
+            }
+          ],
+          "name": "searchKey"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "bali"
+              }
+            },
+            {
+              "name": {
+                "value": "yogyakarta"
+              }
+            },
+            {
+              "name": {
+                "value": "badung"
+              }
+            },
+            {
+              "name": {
+                "value": "jakarta"
+              }
+            }
+          ],
+          "name": "provinceKey"
+        }
+      ]
+    }
+  },
+  "version": "25"
+}
